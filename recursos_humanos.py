@@ -37,12 +37,14 @@ def main():
     
     st.sidebar.header('Escolha de paramentros para Predição')
 
-    menu = dados.filter(['Education', 'Age', 'DistanceFromHome'])
+    menu = dados.filter(['Education', 'Age', 'DistanceFromHome', 'TotalWorkingYears', 'YearsAtCompany'])
     df = user_input_features(menu)
 
     dados['Education'] = df['Education']
     dados['Age'] = df['Age']
     dados['DistanceFromHome'] = df['DistanceFromHome']
+    dados['TotalWorkingYears'] = df['TotalWorkingYears']
+    dados['YearsAtCompany'] = df['YearsAtCompany']
 
     st.header('Parametros especificados')
     st.write(df)
