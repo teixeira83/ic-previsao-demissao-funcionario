@@ -21,7 +21,7 @@ def model_ia(x,y):
     return model
 
 def load_data():
-    binario = open('classificador7.pkl','rb')
+    binario = open('classificador.pkl','rb')
     modelo = pickle.load(binario)
     dados = pd.read_csv('x_test.csv').drop(columns=['Unnamed: 0'])
     return dados, modelo
